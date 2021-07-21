@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title></title>
+</head>
+<body>
+    <!-- cookie -->
+    <div class="cookie close">
+        <div class="container">
+            <div class="cookie__box">
+                <p>Для улучшения работы сайта и его взаимодействия с пользователями мы используем файлы cookie. Продолжая работу с сайтом, Вы разрешаете использование cookie-файлов. Вы всегда можете отключить файлы cookie в настройках Вашего браузера.</p>
+                <button class="cookie__close">Принять</button>
+            </div>
+        </div>
+    </div>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="left">
+                    <p><img src="img/header-map.svg" alt=""> г. Новосибирск  ул. Ленина</p>
+                    <button class="open-down"><img src="img/header-time.svg" alt=""> Время работы 
+                        <div class="down">
+                            <p>Пн–Сб: 10:00–19:00</p>
+                            <p>Вск: 11:00–15:30</p>
+                        </div>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.5 4.5L6 8L2.5 4.5" stroke="#D1D5DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li>
+                            <a href="#">О компании</a>
+                        </li>
+                        <li>
+                            <a href="#">Новости</a>
+                        </li>
+                        <li>
+                            <a href="#">Отзывы</a>
+                        </li>
+                        <li>
+                            <a href="#">Доставка и оплата</a>
+                        </li>
+                        <li>
+                            <a href="#">Вопрос-ответ</a>
+                        </li>
+                        <li>
+                            <a href="#">Контакты</a>
+                        </li>
+                    </ul>
+                    <button class="header__phone open-down">+7 (383) 000-22-01
+                        <div class="down">
+                            <a href="tel:+7 (383) 000-22-01">+7 (383) 000-22-01</a>
+                            <a href="tel:+7 (383) 000-22-01">+7 (383) 000-22-01</a>
+                        </div>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.5 4.5L6 8L2.5 4.5" stroke="#D1D5DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="header__center">
+            <div class="container">
+                <a href="#" class="header__logo">
+                    <img src="img/Logo.svg" alt="">
+                </a>
+                <div class="header__search">
+                    <button class="categore_open"> <div class="burgir">
+                        <span></span><span></span><span></span>
+                    </div>  Каталог</button>
+                    <form action="">
+                        <input type="search" placeholder="Поиск по каталогу">
+                        <button>
+                            <img src="img/header-search.svg" alt="">
+                        </button>
+                    </form>
+                </div>
+                <div class="header__user">
+                    <a href="#">
+                        <img src="img/header-user.svg" alt="">
+                        Войти
+                    </a>
+                    <a href="#" class="header-cart">
+                        <img src="img/header-cart.svg" alt="">
+                        Корзина
+                        <span>17</span>
+                    </a>
+                </div>
+                <div class="header__categore_down">
+                    <div class="categore_wrap">
+                        <ul class="categore_nav">
+                            <li class="mouse">
+                                Пункт каталога
+                                <div class="categore_block">
+                                    <div class="categore_box">
+                                        <div class="left">
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <p><a href="#">Подпункт каталога очень длинный</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт каталога</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <p><a href="#">Подпункт каталога очень длинный</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт каталога</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <p><a href="#">Подпункт каталога очень длинный</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт каталога</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                        </div>
+                                        <div class="center">
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <p><a href="#">Подпункт каталога очень длинный</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <p><a href="#">Подпункт каталога очень длинный</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт каталога</a></p>
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                        </div>
+                                        <div class="right">
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <p><a href="#">Подпункт каталога очень длинный</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт каталога</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mouse">
+                                Пункт каталога не может быть ..
+                                <div class="categore_block">
+                                    <div class="categore_box">
+                                        <div class="left">
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <p><a href="#">Подпункт каталога очень длинный</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт каталога</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <p><a href="#">Подпункт каталога очень длинный</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт каталога</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <p><a href="#">Подпункт каталога очень длинный</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт каталога</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                        </div>
+                                        <div class="center">
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <p><a href="#">Подпункт каталога очень длинный</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <p><a href="#">Подпункт каталога очень длинный</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт каталога</a></p>
+                                        </div>
+                                        <div class="right">
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mouse">
+                                Пункт каталога не может быть ..
+                                <div class="categore_block">
+                                    <div class="categore_box">
+                                        <div class="left">
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <p><a href="#">Подпункт каталога очень длинный</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт каталога</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                        </div>
+                                        <div class="center">
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <p><a href="#">Подпункт каталога очень длинный</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <p><a href="#">Подпункт каталога очень длинный</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт каталога</a></p>
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                        </div>
+                                        <div class="right">
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <p><a href="#">Подпункт каталога очень длинный</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт каталога</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mouse">
+                                Пункт каталога
+                                <div class="categore_block">
+                                    <div class="categore_box">
+                                        <div class="left">
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <p><a href="#">Подпункт каталога очень длинный</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт каталога</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                        </div>
+                                        <div class="center">
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <p><a href="#">Подпункт каталога очень длинный</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <p><a href="#">Подпункт каталога очень длинный</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт каталога</a></p>
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                        </div>
+                                        <div class="right">
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <p><a href="#">Подпункт каталога очень длинный</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт каталога</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт каталога</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mouse">
+                                Пункт каталога не может быть ..
+                                <div class="categore_block">
+                                    <div class="categore_box">
+                                        <div class="left">
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <p><a href="#">Подпункт каталога очень длинный</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт каталога</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <p><a href="#">Подпункт каталога очень длинный</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт каталога</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <p><a href="#">Подпункт каталога очень длинный</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт каталога</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                        </div>
+                                        <div class="center">
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <p><a href="#">Подпункт каталога очень длинный</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <p><a href="#">Подпункт каталога очень длинный</a></p>
+                                            <p><a href="#">Подпункт обычный пункт</a></p>
+                                            <p><a href="#">Подпункт каталога</a></p>
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                            <h5><a href="#">Пункт каталога</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mouse">
+                                Пункт каталога
+                            </li>
+                            <li class="mouse">
+                                Пункт каталога не может быть ..
+                            </li>
+                            <li class="mouse">
+                                Пункт каталога не может быть ..
+                            </li>
+                            <li class="mouse">
+                                Пункт каталога не может быть ..
+                            </li>
+                            <li class="mouse">
+                                Пункт каталога не может быть ..
+                            </li>
+                            <li class="mouse">
+                                Пункт каталога не может быть ..
+                            </li>
+                            <li class="mouse">
+                                Пункт каталога не может быть ..
+                            </li>
+                            <li class="mouse">
+                                Пункт каталога не может быть ..
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <ul class="header__navbar">
+                    <li>
+                        <a href="#">Акции</a>
+                    </li>
+                    <li>
+                        <a href="#">Телевизоры</a>
+                    </li>
+                    <li>
+                        <a href="#">Планшеты</a>
+                    </li>
+                    <li>
+                        <a href="#">Мониторы</a>
+                    </li>
+                    <li>
+                        <a href="#">Хиты продаж</a>
+                    </li>
+                    <li>
+                        <a href="#">Рекомендации</a>
+                    </li>
+                    <li>
+                        <a href="#">Выгодные комплекты</a>
+                    </li>
+                    <li>
+                        <a href="#">Наушники</a>
+                    </li>
+                    <li>
+                        <a href="#">Ноутбуки</a>
+                    </li>
+                    <button class="open-down"><div class="p"><span></span><span></span><span></span></div>
+                        <div class="down">
+                            <a href="#">Отзывы о нас</a>
+                            <a href="#">Статьи</a>
+                            <a href="#">Лицензии</a>
+                            <a href="#">Пользовательское соглашение</a>
+                        </div>
+                    </button>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+        <section class="articles_page">
+            <div class="container">
+                <div class="crumbs">
+                    <a href="#">Главная</a>
+                    <p>/</p>
+                    <p>Статьи</p>
+                </div>
+                <h2>Статьи</h2>
+                <div class="articles_page__box">
+                    <a href="#" class="articles_page__item">
+                        <div class="img">
+                            <img src="img/img.jpg" alt="">
+                        </div>
+                        <h5>Заголовок статьи</h5>
+                        <span class="date">24 мая 2021</span>
+                    </a>
+                    <a href="#" class="articles_page__item">
+                        <div class="img">
+                            <img src="img/img.jpg" alt="">
+                        </div>
+                        <h5>Илон Маск выступил за усиление диалога между Россией и США Американский мил...</h5>
+                        <span class="date">24 мая 2021</span>
+                    </a>
+                    <a href="#" class="articles_page__item">
+                        <div class="img">
+                            <img src="img/img.jpg" alt="">
+                        </div>
+                        <h5>Илон Маск выступил за усиление диалога между Россией и США Американский мил...</h5>
+                        <span class="date">24 мая 2021</span>
+                    </a>
+                    <a href="#" class="articles_page__item">
+                        <div class="img">
+                            <img src="img/img.jpg" alt="">
+                        </div>
+                        <h5>Заголовок статьи</h5>
+                        <span class="date">24 мая 2021</span>
+                    </a>
+                    <a href="#" class="articles_page__item">
+                        <div class="img">
+                            <img src="img/img.jpg" alt="">
+                        </div>
+                        <h5>Илон Маск выступил за усиление диалога между Россией и США Американский мил...</h5>
+                        <span class="date">24 мая 2021</span>
+                    </a>
+                    <a href="#" class="articles_page__item">
+                        <div class="img">
+                            <img src="img/img.jpg" alt="">
+                        </div>
+                        <h5>Илон Маск выступил за усиление диалога между Россией и США Американский мил...</h5>
+                        <span class="date">24 мая 2021</span>
+                    </a>
+                    <a href="#" class="articles_page__item">
+                        <div class="img">
+                            <img src="img/img.jpg" alt="">
+                        </div>
+                        <h5>Заголовок статьи</h5>
+                        <span class="date">24 мая 2021</span>
+                    </a>
+                    <a href="#" class="articles_page__item">
+                        <div class="img">
+                            <img src="img/img.jpg" alt="">
+                        </div>
+                        <h5>Илон Маск выступил за усиление диалога между Россией и США Американский мил...</h5>
+                        <span class="date">24 мая 2021</span>
+                    </a>
+                    <a href="#" class="articles_page__item">
+                        <div class="img">
+                            <img src="img/img.jpg" alt="">
+                        </div>
+                        <h5>Илон Маск выступил за усиление диалога между Россией и США Американский мил...</h5>
+                        <span class="date">24 мая 2021</span>
+                    </a>
+                </div>
+                <div class="next">
+                    <a class="active" href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">...</a>
+                    <a href="#">
+                        <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.7071 8.70711C21.0976 8.31658 21.0976 7.68342 20.7071 7.29289L14.3431 0.928932C13.9526 0.538408 13.3195 0.538408 12.9289 0.928932C12.5384 1.31946 12.5384 1.95262 12.9289 2.34315L18.5858 8L12.9289 13.6569C12.5384 14.0474 12.5384 14.6805 12.9289 15.0711C13.3195 15.4616 13.9526 15.4616 14.3431 15.0711L20.7071 8.70711ZM0 9H20V7H0V9Z" fill="#D1D5DB"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container">
+                <div class="footer__top__box">
+                    <div class="link">
+                        <h5>Контакты</h5>
+                        <p><img src="img/footer-phone.svg" alt=""> <span>+ 7 (383) 000-22-00</span></p>
+                        <button class="call">Заказать звонок</button>
+                        <a href="#"><img src="img/footer-email.svg" alt=""> <span>info@logotype.ru</span></a>
+                        <p><img src="img/footer-map.svg" alt=""> <span>000000 г. Красноярск, пр. имени газеты Красноярский рабочий, д.146, офис 1133б</span></p>
+                    </div>
+                    <div class="link">
+                        <h5>Каталог</h5>
+                        <p>Категория товаров для тех, у кого длинное наименование</p>
+                        <p>Категория для тех, у кого длинное наименование в целых три строки</p>
+                        <a href="#">Категория товара</a>
+                        <a href="#">Категория товара</a>
+                        <a href="#">Категория товара</a>
+                        <a href="#">Категория товара</a>
+                    </div>
+                    <div class="link">
+                        <h5>Покупателям</h5>
+                        <a href="#">Все товары</a>
+                        <a href="#">Акции</a>
+                        <a href="#">Доставка и оплата</a>
+                        <a href="#">О компании</a>
+                        <a href="#">Вопрос-ответ</a>
+                        <a href="#">Новости</a>
+                        <a href="#">Контакты</a>
+                    </div>
+                    <div class="soc">
+                        <h5>Мы в социальных сетях</h5>
+                        <div class="icon1">
+                            <a href="#">
+                                <img src="img/vk.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="img/ok.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="img/fb.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="img/inst.svg" alt="">
+                            </a>
+                        </div>
+                        <h5>Напишите нам в мессенджеры</h5>
+                        <div class="icon2">
+                            <a href="#">
+                                <img src="img/wa.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="img/tg.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="img/vb.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom_box">
+                    <div class="left">
+                        <p>© 2019–2021 site.com</p>
+                        <a href="#">Политика конфиденциальности</a>
+                    </div>
+                    <div class="center">
+                        <h5>Мы принимаем к оплате</h5>
+                        <img src="img/visa.svg" alt="">
+                    </div>
+                    <div class="right">
+                        <div>
+                            <a href="#">Создание сайтов</a>
+                            <a href="#">Продвижение сайтов</a>
+                        </div>
+                        <img src="img/kontur.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="slick-1.8.1/slick/slick.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/SmoothScroll.js"></script>
+</body>
+</html>
