@@ -1,6 +1,3 @@
-<script>
-    alert('Над страницей идут доработки');
-</script>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -8,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
     <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" href="css/style.css">
@@ -509,7 +507,19 @@
                             <li>
                                 <h5>Цена, ₽ <img src="img/aside-down.svg" alt=""></h5>
                                 <div class="block">
-
+                                    <div class="slider-range">
+                                        <div id="slider-range"></div>
+                                    </div>
+                                    <div class="price_num">
+                                        <p>
+                                            от
+                                            <input type="text" id="amount" readonly>
+                                        </p>
+                                        <p>
+                                            до
+                                            <input type="text" id="amount2" readonly>
+                                        </p>
+                                    </div>
                                 </div>
                             </li>
                         </ul>
@@ -517,7 +527,30 @@
                             <li>
                                 <h5>Цвет <img src="img/aside-down.svg" alt=""></h5>
                                 <div class="block">
-
+                                    <div class="check">
+                                        <input type="checkbox" id="check">
+                                        <label for="check">Черный</label>
+                                    </div>
+                                    <div class="check">
+                                        <input type="checkbox" id="check">
+                                        <label for="check">Белый</label>
+                                    </div>
+                                    <div class="check">
+                                        <input type="checkbox" id="check">
+                                        <label for="check">Серый</label>
+                                    </div>
+                                    <div class="check">
+                                        <input type="checkbox" id="check">
+                                        <label for="check">Синий</label>
+                                    </div>
+                                    <div class="check">
+                                        <input type="checkbox" id="check">
+                                        <label for="check">Зеленый</label>
+                                    </div>
+                                    <div class="check">
+                                        <input type="checkbox" id="check">
+                                        <label for="check">Красный</label>
+                                    </div>
                                 </div>
                             </li>
                         </ul>
@@ -541,7 +574,20 @@
                             <li>
                                 <h5>Производитель <img src="img/aside-down.svg" alt=""></h5>
                                 <div class="block">
-
+                                    <div class="radio">
+                                        <input type="radio" id="radio" name="radio">
+                                        <div class="radio_check">
+                                            <span></span>
+                                        </div>
+                                        <label for="radio">Указан</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" id="radio2" name="radio">
+                                        <div class="radio_check">
+                                            <span></span>
+                                        </div>
+                                        <label for="radio2" >Не указан</label>
+                                    </div>
                                 </div>
                             </li>
                         </ul>
@@ -921,8 +967,39 @@
     </footer>
 
     <script src="js/jquery.min.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
     <script src="slick-1.8.1/slick/slick.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/SmoothScroll.js"></script>
+    <script>
+        const catalog = document.querySelectorAll('.catalog__aside ul li p');
+        for(let i = 0; i < catalog.length; i++) {
+            catalog[i].addEventListener('click', function() {
+                this.classList.toggle('active')
+            });
+        };
+        const catalogh5 = document.querySelectorAll('.catalog__aside ul li h5');
+        for(let i = 0; i < catalogh5.length; i++) {
+            catalogh5[i].addEventListener('click', function() {
+                this.classList.toggle('active')
+            });
+        };
+    </script>
+    <script>
+        $( function() {
+          $( "#slider-range" ).slider({
+            range: true,
+            min: 777,
+            max: 148500,
+            values: [ 777, 148500 ],
+            slide: function( event, ui ) {
+              $( "#amount" ).val(ui.values[ 0 ]);
+              $( "#amount2" ).val(ui.values[ 1 ] );
+            }
+          });
+          $( "#amount" ).val($( "#slider-range" ).slider( "values", 0 ));
+          $( "#amount2" ).val($( "#slider-range" ).slider( "values", 1 ) );
+        } );
+    </script>
 </body>
 </html>
