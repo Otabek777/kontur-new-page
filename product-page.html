@@ -564,8 +564,12 @@
                         <button class="product_add_btn">Добавить в корзину</button>
                     </div>
                 </div>
-                <section class="about-us">
-                    <h3>Описание</h3>
+                <div class="tab-link">
+                    <button class="tab-link-btn1 active">Описание</button>
+                    <button class="tab-link-btn2">Характеристики</button>
+                </div>
+                <section class="about-us tab-block1 active">
+                    <h3 class="h-tab-none">Описание</h3>
                     <div class="text" id="txtBlock">
                         <p>Наша компания основана в 2006 году, и за 12 лет мы выполнили более 4500 проектов для компаний всех сфер бизнеса в Новосибирске, России и ближнего зарубежья, а также ряд проектов для государственных и образовательных учреждений. Наша компания основана в 2006 году, и за 12 лет мы выполнили более 4500 проектов для компаний всех сфер бизнеса в Новосибирске, России и ближнего зарубежья, а также ряд проектов для государственных и образовательных учреждений.  Наша компания основана в 2006 году, и за 12 лет мы выполнили более 4500 проектов для компаний всех сфер бизнеса в Новосибирске, России и 
                             Наша компания основана в 2006 году, и за 12 лет мы выполнили более 4500 проектов для компаний всех сфер бизнеса в Новосибирске, России и ближнего зарубежья, а также ряд проектов для государственных и образовательных учреждений. Наша компания основана в 2006 году, и за 12 лет мы выполнили более 4500 проектов для компаний всех сфер бизнеса в Новосибирске, России и ближнего зарубежья, а также ряд проектов для государственных и образовательных учреждений.  Наша компания основана в 2006 году, и за 12 лет мы выполнили более 4500 проектов для компаний всех сфер бизнеса в Новосибирске, России и </p>
@@ -574,56 +578,56 @@
                         </div>
                     <button id="openTxt">Показать все</button>
                 </section>
-                <h3>Характеристики</h3>
-                <div class="product__characteristics">
+                <h3 class="h-tab-none">Характеристики</h3>
+                <div class="product__characteristics tab-block2">
                     <h6>Общие</h6>
                     <div class="characteristics">
-                        <p>Тип</p>
-                        <span>.................................................................</span>
+                        <p><span>Тип</span></p>
+                        <!-- <span>.................................................................</span> -->
                         <p>Обувь</p>
                     </div>
                     <div class="characteristics">
-                        <p>Бренд</p>
-                        <span>.................................................................</span>
+                        <p><span>Бренд</span></p>
+                        <!-- <span>.................................................................</span> -->
                         <p>Гуси</p>
                     </div>
                     <div class="characteristics">
-                        <p>Страна</p>
-                        <span>.................................................................</span>
+                        <p><span>Страна</span></p>
+                        <!-- <span>.................................................................</span> -->
                         <p>Россия</p>
                     </div>
                     <h5>Дополнительные</h5>
                     <div class="characteristics__box">
                         <div class="characteristics">
-                            <p>Ширина, см</p>
-                            <span>.................................................................</span>
+                            <p><span>Ширина, см</span></p>
+                            <!-- <span>.................................................................</span> -->
                             <p>39</p>
                         </div>
                         <div class="characteristics">
-                            <p>Длина, см</p>
-                            <span>.................................................................</span>
+                            <p><span>Длина, см</span></p>
+                            <!-- <span>.................................................................</span> -->
                             <p>28</p>
                         </div>
                         <div class="characteristics">
-                            <p>Высота, см</p>
-                            <span>.................................................................</span>
+                            <p><span>Высота, см</span></p>
+                            <!-- <span>.................................................................</span> -->
                             <p>4</p>
                         </div>
                     </div>
                     <div class="characteristics__box">
                         <div class="characteristics">
-                            <p>Ширина, см</p>
-                            <span>.................................................................</span>
+                            <p><span>Ширина, см</span></p>
+                            <!-- <span>.................................................................</span> -->
                             <p>39</p>
                         </div>
                         <div class="characteristics">
-                            <p>Длина, см</p>
-                            <span>.................................................................</span>
+                            <p><span>Длина, см</span></p>
+                            <!-- <span>.................................................................</span> -->
                             <p>28</p>
                         </div>
                         <div class="characteristics">
-                            <p>Высота, см</p>
-                            <span>.................................................................</span>
+                            <p><span>Высота, см</span></p>
+                            <!-- <span>.................................................................</span> -->
                             <p>4</p>
                         </div>
                     </div>
@@ -835,7 +839,12 @@
                 <div class="footer__top__box">
                     <div class="link">
                         <h5>Контакты</h5>
-                        <p><img src="img/footer-phone.svg" alt=""> <span>+ 7 (383) 000-22-00</span></p>
+                        <button class="footer_phone"><img src="img/footer-phone.svg" alt=""> <span>+ 7 (383) 000-22-00 <img src="img/footer_phone_down.svg" alt=""></span>
+                            <div class="footer_phone__block">
+                                <a href="#">+ 7 (383) 000-22-00</a>
+                                <a href="#">+ 7 (383) 000-22-00</a>
+                            </div>
+                        </button>
                         <button class="call">Заказать звонок</button>
                         <a href="#"><img src="img/footer-email.svg" alt=""> <span>info@logotype.ru</span></a>
                         <p><img src="img/footer-map.svg" alt=""> <span>000000 г. Красноярск, пр. имени газеты Красноярский рабочий, д.146, офис 1133б</span></p>
@@ -936,6 +945,23 @@
             });
         document.querySelector('#openTxt').addEventListener('click', function() {
             document.querySelector('#txtBlock').classList.toggle('active');
+        });
+
+        const tabLinkBtn1 = document.querySelector('.tab-link-btn1');
+        const tabLinkBtn2 = document.querySelector('.tab-link-btn2');
+        const tabBlock1 = document.querySelector('.tab-block1');
+        const tabBlock2 = document.querySelector('.tab-block2');
+        tabLinkBtn1.addEventListener('click', function() {
+            this.classList.add('active');
+            tabBlock1.classList.add('active');
+            tabLinkBtn2.classList.remove('active');
+            tabBlock2.classList.remove('active');
+        });
+        tabLinkBtn2.addEventListener('click', function() {
+            this.classList.add('active');
+            tabBlock2.classList.add('active');
+            tabLinkBtn1.classList.remove('active');
+            tabBlock1.classList.remove('active');
         });
     </script>
 </body>

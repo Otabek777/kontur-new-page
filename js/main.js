@@ -43,3 +43,7 @@ for(let i = 0; i < addProduct.length; i++) {
         }, 180);
     });
 }
+
+document.querySelector('.footer_phone').addEventListener('click', function() {
+    this.classList.toggle('active');
+});
