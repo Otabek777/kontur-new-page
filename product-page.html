@@ -926,7 +926,6 @@
     <script src="js/jquery.min.js"></script>
     <script src="slick-1.8.1/slick/slick.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/SmoothScroll.js"></script>
     <script>
          $('.slide_img').slick({
                 slidesToShow: 1,
@@ -942,9 +941,17 @@
                 dots: false,
                 vertical: true,
                 verticalSwiping: true,
+                focusOnSelect: true,
             });
-        document.querySelector('#openTxt').addEventListener('click', function() {
+            document.querySelector('#openTxt').addEventListener('click', function() {
+            this.classList.toggle('active');
             document.querySelector('#txtBlock').classList.toggle('active');
+            if(this.classList.contains('active')) {
+                this.innerHTML = "Скрыть";
+            }
+            else {
+                this.innerHTML = "Показать все";
+            }
         });
 
         const tabLinkBtn1 = document.querySelector('.tab-link-btn1');

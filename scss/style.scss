@@ -1439,6 +1439,7 @@ ul,ol {
         margin: 0;
         background: #F3F4F6;
         border: 1px solid #F3F4F6;
+        border-right: 0;
         overflow: hidden;
         .img {
             width: 230px;
@@ -1450,6 +1451,9 @@ ul,ol {
             min-height: 100%;
             border-top: 1px solid #D1D5DB;
         }
+    }
+    .categories__item:nth-child(4n) {
+        border-right: 1px solid #F3F4F6;
     }
 }
 
@@ -4012,6 +4016,14 @@ section h2 {
     line-height: 42px;
     color: #111827;
     margin-bottom: 33px;
+    a {
+        display: flex;
+        align-items: center;
+        color: #111827;
+        img {
+            margin-left: 27px;
+        }
+    }
 }
 
 //------------------------- Footer
@@ -4042,7 +4054,7 @@ section h2 {
 }
 .footer_phone__block {
     display: none;
-    width: 200px;
+    width: 170px;
     background-color: #fff;
     position: absolute;
     left: 0;

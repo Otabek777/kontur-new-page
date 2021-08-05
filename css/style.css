@@ -1412,6 +1412,7 @@ ul, ol {
   margin: 0;
   background: #F3F4F6;
   border: 1px solid #F3F4F6;
+  border-right: 0;
   overflow: hidden; }
   .categories2 .categories__item .img {
     width: 230px;
@@ -1421,6 +1422,9 @@ ul, ol {
     background-color: #fff;
     min-height: 100%;
     border-top: 1px solid #D1D5DB; }
+
+.categories2 .categories__item:nth-child(4n) {
+  border-right: 1px solid #F3F4F6; }
 
 .stock {
   padding-bottom: 80px; }
@@ -4033,6 +4037,16 @@ section h2 {
   line-height: 42px;
   color: #111827;
   margin-bottom: 33px; }
+  section h2 a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #111827; }
+    section h2 a img {
+      margin-left: 27px; }
 
 .footer {
   background: #111827; }
@@ -4069,7 +4083,7 @@ section h2 {
 
 .footer_phone__block {
   display: none;
-  width: 200px;
+  width: 170px;
   background-color: #fff;
   position: absolute;
   left: 0;
