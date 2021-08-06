@@ -316,6 +316,145 @@ ul, ol {
   .check input:checked + label::after {
     display: block; }
 
+.modal__reg {
+  width: 419px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  padding: 48px 0 0;
+  position: relative; }
+  .modal__reg .close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 17px;
+    right: 17px;
+    cursor: pointer;
+    z-index: 1; }
+  .modal__reg .close::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    border-radius: 5px;
+    background-color: #3F3F46;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+    -ms-transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg); }
+  .modal__reg .close::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    border-radius: 5px;
+    background-color: #3F3F46;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    -ms-transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg); }
+  .modal__reg .tab {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: 1px solid #D1D5DB; }
+    .modal__reg .tab button {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 28px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      color: #6B7280;
+      border: none;
+      background-color: transparent;
+      padding-bottom: 12px;
+      -webkit-transform: translateY(1px);
+      -ms-transform: translateY(1px);
+      transform: translateY(1px);
+      border-bottom: 2px solid transparent;
+      cursor: pointer; }
+    .modal__reg .tab button:nth-child(1) {
+      padding-left: 31px;
+      margin-right: 48px; }
+    .modal__reg .tab button:nth-child(2) {
+      width: 100%; }
+    .modal__reg .tab button.active {
+      color: #1C2864;
+      border-bottom: 2px solid #1C2864; }
+
+.modal__reg_reg, .modal__reg_auth {
+  display: none;
+  padding: 32px; }
+  .modal__reg_reg .btn, .modal__reg_auth .btn {
+    width: 100%;
+    height: 40px;
+    background: #374FC7;
+    border-radius: 2px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer; }
+  .modal__reg_reg .input, .modal__reg_auth .input {
+    margin-bottom: 32px; }
+    .modal__reg_reg .input p, .modal__reg_auth .input p {
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 19px;
+      color: #374151;
+      margin-bottom: 8px; }
+    .modal__reg_reg .input input, .modal__reg_auth .input input {
+      width: 100%;
+      height: 48px;
+      padding: 0 16px;
+      background: #FFFFFF;
+      border: 1px solid #D1D5DB;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      border-radius: 2px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 19px;
+      color: #333; }
+    .modal__reg_reg .input input::-webkit-input-placeholder, .modal__reg_auth .input input::-webkit-input-placeholder {
+      color: #D1D5DB; }
+    .modal__reg_reg .input input:-ms-input-placeholder, .modal__reg_auth .input input:-ms-input-placeholder {
+      color: #D1D5DB; }
+    .modal__reg_reg .input input::-ms-input-placeholder, .modal__reg_auth .input input::-ms-input-placeholder {
+      color: #D1D5DB; }
+    .modal__reg_reg .input input::placeholder, .modal__reg_auth .input input::placeholder {
+      color: #D1D5DB; }
+  .modal__reg_reg .check, .modal__reg_auth .check {
+    margin-bottom: 32px; }
+  .modal__reg_reg .check > a, .modal__reg_auth .check > a {
+    margin-left: auto; }
+  .modal__reg_reg label, .modal__reg_auth label {
+    padding-top: 4px; }
+
+.modal__reg_reg.active, .modal__reg_auth.active {
+  display: block; }
+
 .header__top {
   height: 36px;
   background: #F3F4F6; }
@@ -353,18 +492,20 @@ ul, ol {
         margin-right: 10px; }
       .header__top .left p svg, .header__top .left button svg {
         margin-left: 3px; }
-      .header__top .left p .down, .header__top .left button .down {
+      .header__top .left p .down__wrap, .header__top .left button .down__wrap {
         display: none;
+        padding-top: 8px;
         width: 154px;
+        position: absolute;
+        left: 0;
+        top: 20px;
+        z-index: 2; }
+      .header__top .left p .down, .header__top .left button .down {
         padding: 8px 12px;
         background: #FFFFFF;
         -webkit-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.1);
         box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.1);
         border-radius: 0px 0px 2px 2px;
-        position: absolute;
-        left: 0;
-        top: 30px;
-        z-index: 2;
         text-align: start; }
         .header__top .left p .down p, .header__top .left button .down p {
           width: 100%;
@@ -379,9 +520,9 @@ ul, ol {
       margin-right: 0; }
     .header__top .left button {
       cursor: pointer; }
-    .header__top .left button.active svg path {
+    .header__top .left button:hover svg path {
       stroke: #1C2864 !important; }
-    .header__top .left button.active .down {
+    .header__top .left button:hover .down__wrap {
       display: block; }
   .header__top .right {
     margin-left: auto;
@@ -423,12 +564,14 @@ ul, ol {
   margin-left: 34px;
   position: relative;
   cursor: pointer; }
-  .header__phone .down {
+  .header__phone .down__wrap {
+    padding-top: 8px;
     display: none;
     position: absolute;
-    top: 30px;
+    top: 19px;
     right: 0;
-    z-index: 2;
+    z-index: 2; }
+  .header__phone .down {
     width: 166px;
     -webkit-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.1);
@@ -579,10 +722,10 @@ ul, ol {
   height: 428px;
   overflow: visible; }
 
-.header__phone.active svg path {
+.header__phone:hover svg path {
   stroke: #1C2864 !important; }
 
-.header__phone.active .down {
+.header__phone:hover .down__wrap {
   display: block; }
 
 .header__logo {
@@ -787,12 +930,14 @@ ul, ol {
         background: #374151;
         border-radius: 50%;
         display: block; }
-  .header__navbar .down {
+  .header__navbar .down__wrap {
     display: none;
     position: absolute;
-    top: 40px;
+    top: 19px;
     right: 0;
     z-index: 9;
+    padding-top: 20px; }
+  .header__navbar .down {
     width: 277px;
     background: #FFFFFF;
     -webkit-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.1);
@@ -814,10 +959,13 @@ ul, ol {
       margin-bottom: 0; }
     .header__navbar .down a:hover {
       color: #5065CE; }
-  .header__navbar button.active .p span {
+  .header__navbar button:hover .p span {
     background: #1C2864; }
-  .header__navbar button.active .down {
+  .header__navbar button:hover .down__wrap {
     display: block; }
+
+.mobile-phone {
+  display: none; }
 
 .mobile-catalog {
   display: none;
@@ -832,6 +980,8 @@ ul, ol {
 .mobile-catalog__block {
   margin-top: 167px;
   width: 498px;
+  height: calc(100% - 167px);
+  overflow-y: auto;
   background: #FFFFFF;
   padding: 24px 30px 40px 24px;
   -webkit-box-shadow: inset 0px 1px 0px #D1D5DB;
@@ -935,7 +1085,16 @@ ul, ol {
   justify-content: space-between;
   padding: 0 16px; }
   .mobile_menu .img {
-    height: 32px; }
+    height: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
 
 .mobile_burgir, .mobile__catalog, .mobile__cart, .mobile__user {
   text-align: center; }
@@ -944,6 +1103,12 @@ ul, ol {
     font-size: 12px;
     line-height: 14px;
     color: #374151; }
+
+.mobile__catalog.active svg path, .mobile_burgir.active svg path {
+  stroke: #374FC7 !important; }
+
+.mobile__catalog.active p, .mobile_burgir.active p {
+  color: #374FC7; }
 
 .bannerSlider__box {
   display: -webkit-box;
