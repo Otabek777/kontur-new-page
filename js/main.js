@@ -58,7 +58,11 @@ document.querySelector('.footer_phone').addEventListener('click', function() {
 });
 
 // Modal Reg
-document.querySelector('#auth-open').addEventListener('click', function() {
+document.querySelector('#auth-open').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector('#auth').classList.add('active');
+});
+document.querySelector('.mobile__user').addEventListener('click', function() {
     document.querySelector('#auth').classList.add('active');
 });
 

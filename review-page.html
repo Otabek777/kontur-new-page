@@ -97,7 +97,7 @@
                         </form>
                     </div>
                     <div class="header__user">
-                        <a href="#">
+                        <a href="#" id="auth-open">
                             <img src="img/header-user.svg" alt="">
                             Войти
                         </a>
@@ -628,19 +628,68 @@
             <p>Войти</p>
         </div>
     </div>
+    <!-- Modal Reg -->
+    <div class="modal" id="auth">
+        <div class="modal__reg">
+            <span class="close"></span>
+            <div class="tab">
+                <button id="tab_reg" class="active">Вход</button>
+                <button id="tab_auth" class="">Регистрация</button>
+            </div>
+            <div class="modal__reg_reg active">
+                <div class="input">
+                    <p>E-mail</p>
+                    <input type="text" placeholder="example@mail.ru">
+                </div>
+                <div class="input">
+                    <p>Пароль</p>
+                    <input type="password" placeholder="***************">
+                </div>
+                <div class="check">
+                    <input type="checkbox" id="check11">
+                    <label for="check11">Запомнить меня</label>
+                    <a href="#">Забыли пароль?</a>
+                </div>
+                <button class="btn">Войти</button>
+            </div>
+            <div class="modal__reg_auth">
+                <div class="input">
+                    <p>E-mail</p>
+                    <input type="text" placeholder="example@mail.ru">
+                </div>
+                <div class="input">
+                    <p>ФИО</p>
+                    <input type="text" placeholder="Федоров Аркадий Павлович">
+                </div>
+                <div class="input">
+                    <p>Пароль</p>
+                    <input type="password" placeholder="***************">
+                </div>
+                <div class="input">
+                    <p>Повторите пароль</p>
+                    <input type="password" placeholder="***************">
+                </div>
+                <div class="check">
+                    <input type="checkbox" id="check111">
+                    <label for="check111">Я даю согласию на обработку <a href="#">персональных данных</a></label>
+                </div>
+                <button class="btn">Зарегистрироваться</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Modal -->
-    <div class="modal">
+    <div class="modal" id="review">
         <div class="modal__block">
             <span class="close"></span>
-            <h4>Задать вопрос</h4>
+            <h4>Оставить отзыв</h4>
             <h6>Имя</h6>
             <input type="text" class="input" placeholder="Алексей">
-            <h6>Вопрос</h6>
-            <textarea name="" id="" placeholder="Текст вопроса"></textarea>
+            <h6>Отзыв</h6>
+            <textarea name="" id="" placeholder="Текст Отзывы"></textarea>
             <div class="check">
-                <input type="checkbox" id="check">
-                <label for="check">Я даю согласию на обработку <a href="#">персональных данных</a></label>
+                <input type="checkbox" id="check123">
+                <label for="check123">Я даю согласию на обработку <a href="#">персональных данных</a></label>
             </div>
             <button class="btn">Отправить свой вопрос</button>
         </div>
@@ -648,8 +697,9 @@
     <!-- Modal Done -->
     <div class="modal_done">
         <div class="modal__block">
+            <img class="smile" src="img/smile.svg" alt="">
             <span class="close"></span>
-            <h4>Ваш вопрос отправлен</h4>
+            <h4>Спасибо за ваш отзыв!</h4>
             <p>В скором времени вы получите ответ:)</p>
             <button class="btn">Понятно</button>
         </div>
@@ -666,7 +716,7 @@
                 </div>
                 <div class="section_title">
                     <h2>Отзывы</h2>
-                    <button class="btn">Оставить отзыв</button>
+                    <button id="add-modal" class="btn">Оставить отзыв</button>
                 </div>
                 <div class="review_page__box">
                     <div class="review_page__item">
@@ -859,5 +909,13 @@
     <script src="js/jquery.min.js"></script>
     <script src="slick-1.8.1/slick/slick.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        document.querySelector('#add-modal').addEventListener('click', function () {
+            document.querySelector('#review').classList.add('active');
+        });
+        document.querySelector('#review .close').addEventListener('click', function() {
+            document.querySelector('#review').classList.remove('active');
+        });
+    </script>
 </body>
 </html>

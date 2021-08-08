@@ -98,7 +98,7 @@
                         </form>
                     </div>
                     <div class="header__user">
-                        <a href="#">
+                        <a href="#" id="auth-open">
                             <img src="img/header-user.svg" alt="">
                             Войти
                         </a>
@@ -629,6 +629,55 @@
             <p>Войти</p>
         </div>
     </div>
+    <!-- Modal Reg -->
+    <div class="modal" id="auth">
+        <div class="modal__reg">
+            <span class="close"></span>
+            <div class="tab">
+                <button id="tab_reg" class="active">Вход</button>
+                <button id="tab_auth" class="">Регистрация</button>
+            </div>
+            <div class="modal__reg_reg active">
+                <div class="input">
+                    <p>E-mail</p>
+                    <input type="text" placeholder="example@mail.ru">
+                </div>
+                <div class="input">
+                    <p>Пароль</p>
+                    <input type="password" placeholder="***************">
+                </div>
+                <div class="check">
+                    <input type="checkbox" id="check18">
+                    <label for="check18">Запомнить меня</label>
+                    <a href="#">Забыли пароль?</a>
+                </div>
+                <button class="btn">Войти</button>
+            </div>
+            <div class="modal__reg_auth">
+                <div class="input">
+                    <p>E-mail</p>
+                    <input type="text" placeholder="example@mail.ru">
+                </div>
+                <div class="input">
+                    <p>ФИО</p>
+                    <input type="text" placeholder="Федоров Аркадий Павлович">
+                </div>
+                <div class="input">
+                    <p>Пароль</p>
+                    <input type="password" placeholder="***************">
+                </div>
+                <div class="input">
+                    <p>Повторите пароль</p>
+                    <input type="password" placeholder="***************">
+                </div>
+                <div class="check">
+                    <input type="checkbox" id="check17">
+                    <label for="check17">Я даю согласию на обработку <a href="#">персональных данных</a></label>
+                </div>
+                <button class="btn">Зарегистрироваться</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Main -->
     <main class="main">
@@ -645,6 +694,9 @@
                 <h2>Название пункта каталога</h2>
                 <div class="catalog__box">
                     <div class="catalog__aside">
+                        <span id="filter-close">
+                            <img src="img/filter-close.svg" alt="">
+                        </span>
                         <ul class="aside__item">
                             <li><p>Пункт каталога <img src="img/aside-down.svg" alt=""></p>
                                 <ul>
@@ -767,28 +819,28 @@
                                 <h5>Цвет <img src="img/aside-down.svg" alt=""></h5>
                                 <div class="block">
                                     <div class="check">
-                                        <input type="checkbox" id="check">
-                                        <label for="check">Черный</label>
+                                        <input type="checkbox" id="check16">
+                                        <label for="check16">Черный</label>
                                     </div>
                                     <div class="check">
-                                        <input type="checkbox" id="check">
-                                        <label for="check">Белый</label>
+                                        <input type="checkbox" id="check15">
+                                        <label for="check15">Белый</label>
                                     </div>
                                     <div class="check">
-                                        <input type="checkbox" id="check">
-                                        <label for="check">Серый</label>
+                                        <input type="checkbox" id="check14">
+                                        <label for="check14">Серый</label>
                                     </div>
                                     <div class="check">
-                                        <input type="checkbox" id="check">
-                                        <label for="check">Синий</label>
+                                        <input type="checkbox" id="check13">
+                                        <label for="check13">Синий</label>
                                     </div>
                                     <div class="check">
-                                        <input type="checkbox" id="check">
-                                        <label for="check">Зеленый</label>
+                                        <input type="checkbox" id="check12">
+                                        <label for="check12">Зеленый</label>
                                     </div>
                                     <div class="check">
-                                        <input type="checkbox" id="check">
-                                        <label for="check">Красный</label>
+                                        <input type="checkbox" id="check11">
+                                        <label for="check11">Красный</label>
                                     </div>
                                 </div>
                             </li>
@@ -834,6 +886,7 @@
                     </div>
                     <div class="catalog__block">
                         <div class="catalog__link">
+                            <button id="filter-open"><img src="img/filter-icon.svg" alt=""> Фильтр</button>
                             <p>Сортировать по:</p>
                             <a href="#">Цене</a>
                             <a class="active" href="#">Названию</a>
@@ -1243,6 +1296,12 @@
           $( "#amount" ).val($( "#slider-range" ).slider( "values", 0 ));
           $( "#amount2" ).val($( "#slider-range" ).slider( "values", 1 ) );
         } );
+        document.querySelector('#filter-open').addEventListener('click', function() {
+            document.querySelector('.catalog__aside').classList.add('active');
+        });
+        document.querySelector('#filter-close').addEventListener('click', function() {
+            document.querySelector('.catalog__aside').classList.remove('active');
+        });
     </script>
 </body>
 </html>

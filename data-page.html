@@ -97,7 +97,7 @@
                         </form>
                     </div>
                     <div class="header__user">
-                        <a href="#">
+                        <a href="#" id="auth-open">
                             <img src="img/header-user.svg" alt="">
                             Войти
                         </a>
@@ -628,6 +628,55 @@
             <p>Войти</p>
         </div>
     </div>
+    <!-- Modal Reg -->
+    <div class="modal" id="auth">
+        <div class="modal__reg">
+            <span class="close"></span>
+            <div class="tab">
+                <button id="tab_reg" class="active">Вход</button>
+                <button id="tab_auth" class="">Регистрация</button>
+            </div>
+            <div class="modal__reg_reg active">
+                <div class="input">
+                    <p>E-mail</p>
+                    <input type="text" placeholder="example@mail.ru">
+                </div>
+                <div class="input">
+                    <p>Пароль</p>
+                    <input type="password" placeholder="***************">
+                </div>
+                <div class="check">
+                    <input type="checkbox" id="check12">
+                    <label for="check12">Запомнить меня</label>
+                    <a href="#">Забыли пароль?</a>
+                </div>
+                <button class="btn">Войти</button>
+            </div>
+            <div class="modal__reg_auth">
+                <div class="input">
+                    <p>E-mail</p>
+                    <input type="text" placeholder="example@mail.ru">
+                </div>
+                <div class="input">
+                    <p>ФИО</p>
+                    <input type="text" placeholder="Федоров Аркадий Павлович">
+                </div>
+                <div class="input">
+                    <p>Пароль</p>
+                    <input type="password" placeholder="***************">
+                </div>
+                <div class="input">
+                    <p>Повторите пароль</p>
+                    <input type="password" placeholder="***************">
+                </div>
+                <div class="check">
+                    <input type="checkbox" id="check11">
+                    <label for="check11">Я даю согласию на обработку <a href="#">персональных данных</a></label>
+                </div>
+                <button class="btn">Зарегистрироваться</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Modal Имя -->
     <div class="modal name">
@@ -639,7 +688,7 @@
         </div>
     </div>
     <!-- Modal Фамилия -->
-    <div class="modal name">
+    <div class="modal surname">
         <div class="modal__block">
             <span class="close"></span>
             <h4>Введите свою фамилию</h4>
@@ -648,7 +697,7 @@
         </div>
     </div>
     <!-- Modal Номер -->
-    <div class="modal name">
+    <div class="modal number">
         <div class="modal__block">
             <span class="close"></span>
             <h4>Введите свой номер</h4>
@@ -657,7 +706,7 @@
         </div>
     </div>
     <!-- Modal Электронная почта -->
-    <div class="modal name">
+    <div class="modal email">
         <div class="modal__block">
             <span class="close"></span>
             <h4>Введите свой email</h4>
@@ -666,7 +715,7 @@
         </div>
     </div>
     <!-- Modal Пароль -->
-    <div class="modal">
+    <div class="modal password">
         <div class="modal__block">
             <span class="close"></span>
             <h4>Введите пароль</h4>
@@ -695,23 +744,23 @@
                             </div>
                             <div class="data__input">
                                 <p>Имя <span>*</span></p>
-                                <div class="input">Андрей <button><img src="img/change.svg" alt=""></button></div>
+                                <div class="input">Андрей <button id="name-open-modal"><img src="img/change.svg" alt=""></button></div>
                             </div>
                             <div class="data__input">
                                 <p>Фамилия <span>*</span></p>
-                                <div class="input">Федоров <button><img src="img/change.svg" alt=""></button></div>
+                                <div class="input">Федоров <button id="surname-open-modal"><img src="img/change.svg" alt=""></button></div>
                             </div>
                             <div class="data__input">
                                 <p>Контактный телефон <span>*</span></p>
-                                <div class="input">+7(___) ___-__-__ <button><img src="img/change.svg" alt=""></button></div>
+                                <div class="input">+7(___) ___-__-__ <button id="number-open-modal"><img src="img/change.svg" alt=""></button></div>
                             </div>
                             <div class="data__input">
                                 <p>Электронная почта</p>
-                                <div class="input red">Не указана <button><img src="img/change.svg" alt=""></button></div>
+                                <div class="input red">Не указана <button id="email-open-modal"><img src="img/change.svg" alt=""></button></div>
                             </div>
                             <div class="data__input">
                                 <p>Пароль</p>
-                                <div class="input">*************** <button><img src="img/change.svg" alt=""></button></div>
+                                <div class="input">*************** <button id="password-open-modal"><img src="img/change.svg" alt=""></button></div>
                             </div>
                             <div class="data__title">
                                 <h2>Адрес для доставки</h2>
@@ -1241,6 +1290,32 @@
                 this.classList.toggle('active');
             });
         };
+        document.querySelector('#name-open-modal').addEventListener('click', function() {
+            document.querySelector('.modal.name').classList.add('active');
+        });
+        document.querySelector('#surname-open-modal').addEventListener('click', function() {
+            document.querySelector('.modal.surname').classList.add('active');
+        });
+        document.querySelector('#number-open-modal').addEventListener('click', function() {
+            document.querySelector('.modal.number').classList.add('active');
+        });
+        document.querySelector('#email-open-modal').addEventListener('click', function() {
+            document.querySelector('.modal.email').classList.add('active');
+        });
+        document.querySelector('#password-open-modal').addEventListener('click', function() {
+            document.querySelector('.modal.password').classList.add('active');
+        });
+        const modalChangeClose = document.querySelectorAll('.modal .close');
+        for(let i = 0; i < modalChangeClose.length; i++) {
+            modalChangeClose[i].addEventListener('click', function() {
+                document.querySelector('.modal.name').classList.remove('active');
+                document.querySelector('.modal.surname').classList.remove('active');
+                document.querySelector('.modal.number').classList.remove('active');
+                document.querySelector('.modal.email').classList.remove('active');
+                document.querySelector('.modal.password').classList.remove('active');
+            });
+        };
+        
     </script>
 </body>
 </html>
